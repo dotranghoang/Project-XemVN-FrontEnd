@@ -1,0 +1,15 @@
+<h3><p class="text-danger text-center">Tất cả thành viên</p></h3>
+<div >
+  <table style="width:100%;height: 70px " border="1" class="border">
+    <tr class="border">
+      <td>Account</td>
+      <td>Name</td>
+      <td></td>
+    </tr>
+    <tr class="border-primary" *ngFor="let user of userList,index as i">
+      <td>{{user.account}}</td>
+      <td>{{user.nickName}}</td>
+      <td><a [routerLink]="'/delete-user'" class="text-danger">Ban</a></td>
+    </tr>
+  </table>
+</div>

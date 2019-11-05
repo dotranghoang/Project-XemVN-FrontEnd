@@ -1,0 +1,12 @@
+
+<div *ngFor="let post of postList">
+  <p class="text-center col-md-8">{{post.title}}</p>
+  <table border="1">
+    <tr>
+      <td><img src="{{imgUrl + post.image}}"></td>
+      <td><button class="btn btn-info" [routerLink]="'/edit-post/' + post.id">Edit</button></td>
+      <td><button class="btn btn-danger">Delete</button></td>
+    </tr>
+  </table>
+</div>
+

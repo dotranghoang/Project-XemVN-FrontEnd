@@ -1,0 +1,26 @@
+<h3><p class="text-danger"> Chỉnh sửa bài đăng </p></h3>
+<form class="row justify-content-center">
+  <div class="form-group row">
+    <div class="input-group">
+      <table>
+        <tr>
+          <td>Tiêu đề <input  [formControl]="inputTitle" class="form-control" type="text"/> </td>
+        </tr>
+        <tr>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">Chọn Thể Loại</label>
+            </div>
+            <select [formControl]="inputType" class="custom-select" id="inputGroupSelect01" >
+              <option *ngFor="let type of typeList, index as i" value="{{type.id}}">{{type.type}}</option>
+            </select>
+          </div>
+        </tr>
+        <td>Ảnh<input  [formControl]="inputImage" class="form-control" type="file" (change)="handleFileChooser($event.target.files)"></td>
+        <tr>
+        </tr>
+        <td><button class="btn btn-warning" (click)="editPost()">Sửa Bài</button></td>
+      </table>
+    </div>
+  </div>
+</form>

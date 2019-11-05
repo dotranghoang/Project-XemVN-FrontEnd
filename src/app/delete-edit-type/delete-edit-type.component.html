@@ -1,0 +1,7 @@
+<h3><p class="text-danger">Quản lí thể loại</p></h3>
+<a class="text-reset border" [routerLink]="'/create-type'" >Thêm thể loại</a>
+<div *ngFor="let typePost of typeList,index as i">
+  <input type="text" [formControl]="inputControl"  placeholder="{{typePost.type}}">
+    <button class="btn btn-info" (click)="editType(i)">Sửa</button>
+    <button class="btn btn-danger" (click)="deleteType(i)">Xóa</button>
+</div>

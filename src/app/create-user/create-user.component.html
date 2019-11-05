@@ -1,0 +1,16 @@
+<h3><p class="text-danger"> Đăng kí tài khoản </p></h3>
+<form class="row justify-content-center">
+  <div class="form-group row">
+    <div class="input-group">
+      <table>
+        <tr>
+          <td>Tên Tài khoản<input  [formControl]="inputAccount" class="form-control" type="text"></td>
+        </tr>
+      <p>Tên hiển thị<input  [formControl]="inputName" class="form-control" type="text"></p>
+      <p>Mật khẩu<input  [formControl]="inputPassword" class="form-control" type="password"></p>
+      <p>Xác nhận mật khẩu<input  [formControl]="inputConfirmPassword" class="form-control" type="password"></p>
+      <p><button class="btn btn-warning" (click)="createNewUser()">Đăng kí</button></p>
+      </table>
+    </div>
+  </div>
+</form>
